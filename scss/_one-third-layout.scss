@@ -1,0 +1,76 @@
+/* ONE-THIRD LAYOUT */ 
+//Use for day 1,2,3 and contact page 
+
+.one-third-layout {
+    display: flex;
+
+    .side-nav {
+        width: 25%;
+        border: $light-grey solid 0.5px;
+        background: $grey-bgr;
+
+        ul {
+            padding: 18% 15%;
+            list-style: none;
+
+            li {
+                font-size: 1.5rem;
+                line-height: 3rem;
+            }
+        }
+
+    }
+
+    .main-content {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        border: $light-grey solid 0.5px;
+        padding: 5%;
+        align-items: flex-start;
+
+        button {
+            max-width: 150px;
+        }
+
+        img {
+            
+            display: block;
+            margin: 2% 50px 2% 0;
+        }
+
+        video {
+            width: 100%;
+        }
+        
+    }
+
+    @include mq(1000px) {
+        flex-direction: column;
+
+        .side-nav {
+            width: 100%;
+
+            ul {
+                padding: 2% 5%;
+                
+            }
+        }
+
+        .main-content {
+            width: 100%;
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+

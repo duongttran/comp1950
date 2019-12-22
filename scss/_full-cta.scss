@@ -1,0 +1,16 @@
+/* FULL CTA */
+
+.full-cta-img {
+    display: flex;
+    max-height: 400px;
+    background: $deep-blue;
+
+    img {
+        object-fit: cover;
+        background-blend-mode: normal;
+        filter: grayscale(50%);
+        opacity: 30%;
+    }
+    
+}
+

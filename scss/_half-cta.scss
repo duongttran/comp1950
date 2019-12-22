@@ -1,0 +1,50 @@
+
+/* HALF CTA */ 
+.half-cta, .one-third-cta {
+    display: flex;
+    align-items: center;
+
+    .cta-img {
+        display: flex;
+        height: 600px;
+        width: 50%;
+
+        img {
+            object-fit: cover;
+            object-position: bottom center;
+        }
+    }
+
+    .cta-content {
+        flex: 1;
+    }
+
+    @include mq(599px, 376px) {
+        flex-direction: column;
+
+        .cta-img {
+            width: 100%;
+            max-height: 350px;
+        }
+
+        .cta-content {
+            padding-bottom: 10%;
+        }
+
+    }
+
+    @include mq(375px) {
+        flex-direction: column;
+        
+        .cta-img {
+            width: 100%;
+            max-height: 200px;
+        }
+
+        .cta-content {
+            padding-bottom: 12%; 
+        }
+    }
+
+}
+

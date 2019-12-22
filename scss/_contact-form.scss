@@ -1,0 +1,51 @@
+/* CONTACT FORM */
+
+.contact-form {
+    
+    display: grid;
+    grid-template-columns: [labels] auto [controls] 1fr;
+    grid-auto-flow: row;
+    grid-gap: .8em;
+    background: #eee;
+    padding: 1.2em;
+
+    label{
+        grid-column: labels;
+        grid-row: auto;
+    }
+
+    input, textarea{
+        grid-column: controls;
+        grid-row: auto;
+        border: none;
+        padding: 1em;
+
+        &[type="submit"], &[type="reset"]{
+            background: transparent;
+            border: $neon-blue 1px solid;
+            
+            font-family: $body-font;
+            font-size: 14px;
+          
+            letter-spacing: 2px;
+            font-weight: $semi-weight;
+            color: $neon-blue;
+            cursor: pointer;
+            transition: 0.5s;
+           
+            min-width: 50px;
+            text-transform: uppercase;
+        }
+
+        &[type="submit"]:hover, &[type="reset"]:hover{
+            background: $neon-blue;
+            border: $neon-blue 1px solid;
+            padding: 20px;
+    
+            color: $light-text;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+    }
+
+}

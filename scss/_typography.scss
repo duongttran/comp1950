@@ -1,0 +1,193 @@
+/* TYPOGRAPHY */
+
+//Headings
+h1, h2, h3, h4, h5 {
+    color: $deep-blue;
+    font-family: $body-font;
+    font-weight: $heading-weight;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 3% 0px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin: 2.5% 0px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 2% 0px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin: 1.5% 0px;
+}
+
+
+
+//Body
+* {
+    overflow-wrap: break-word;
+}
+
+hr {
+    border: $light-grey solid 0.5px;
+    margin: 0;
+}
+
+body {
+    font-family: $body-font;
+    /*margin: 0;*/
+    color: $blackish;
+    
+}
+
+p, ul li, ol li {
+    font-family: $body-font;
+    color: $blackish;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: $body-weight;
+    margin: 0.5% 0;
+}
+
+
+a {
+    color: $neon-blue;
+    text-decoration: none;
+    font-weight: $semi-weight;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: $deep-blue;
+    transition: 0.5s;
+}
+
+button {
+    background: transparent;
+    border: $neon-blue 1px solid;
+    
+    font-family: $body-font;
+    font-size: 14px;
+  
+    letter-spacing: 2px;
+    font-weight: $semi-weight;
+    color: $neon-blue;
+    cursor: pointer;
+    transition: 0.5s;
+   
+    min-width: 150px;
+    padding: 20px;
+    margin: 2% 15px 3% 0;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: $neon-blue;
+    border: $neon-blue 1px solid;
+    padding: 20px;
+
+    color: $light-text;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.secondary {
+    border: $light-text 1px solid;
+    color: $light-text;
+}
+
+.secondary:hover {
+    border: $neon-yellow 1px solid;
+    color: $deep-blue;
+    background: $neon-yellow;
+}
+
+.center-content {
+    text-align: center;
+    margin: auto;
+}
+
+.white-text {
+    color: $light-text;
+}
+
+
+.bold-text, b {
+    font-weight: 600;
+    color: $deep-blue;
+}
+
+
+@include mq(1189px, 600px) {
+    p, ul li, ol li, table {
+        font-size: 15px;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        margin: 2% 0px;
+        font-size: 2rem;
+    }
+
+    h4 {
+        margin: 5px 0px;
+    }
+}
+
+    @include mq(599px, 376px) {
+        p, ul li, ol li, table {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        h1{
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            margin: 2% 0px;
+            font-size: 2rem;
+        }
+
+        button {
+            font-size: 13px;
+            padding: 4%;
+        }
+    }
+
+        @include mq(375px) {
+            p, ul li, ol li, table {
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            h1 {
+                margin: 5% 0px;
+                font-size: 2.5rem;
+                line-height: 2.8rem;
+            }
+    
+            h2 {
+                margin: 5% 0px;
+                font-size: 2rem;
+                line-height: 2.2rem;
+            }
+
+            button {
+                font-size: 12px;
+                padding: 7%;
+            }
+
+            button:hover {
+                padding: 7%;
+            }
+        }

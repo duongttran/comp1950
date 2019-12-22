@@ -1,0 +1,62 @@
+/* ONE THIRD */
+.one-third-cta {
+
+    height: auto;
+
+    .one-third {
+        display: flex;
+        height: 510px;
+        width: 35%;
+    }
+
+    .two-third {
+        display: flex;
+        max-height: 510px;
+        width: 65%;
+    }
+
+    img {
+        object-fit: cover;
+        object-position: middle center;
+    }
+
+    @include mq(1189px){
+        flex-direction: column;
+        .one-third,
+        .two-third {
+            width: 100%;
+        }
+    }
+
+    @include mq(1189px, 600px){
+        .one-third,
+        .two-third {
+            max-height: 350px;
+        }
+    }
+
+    @include mq(599px, 376px){
+        .one-third,
+        .two-third {
+            max-height: 320px;
+        }
+    }
+
+    @include mq(375px){
+        .one-third,
+        .two-third {
+            max-height: 250px;
+        }
+
+    }
+
+
+}
+
+
+
+
+
+
+
+

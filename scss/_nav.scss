@@ -1,0 +1,144 @@
+/* NAVIGATION */
+header {
+  display: flex;
+  padding: 3% 5%;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    width: 120px;
+  }
+
+  a {
+    color: $neon-blue;
+    font-size: 18px;
+  }
+
+  @include mq(599px, 376px) {
+    .logo {
+      width: 85px;
+    }
+  }
+
+  @include mq(375px) {
+    .logo {
+      width: 70px;
+      padding: 4% 1.5%;
+    }
+  }
+}
+
+
+// placeholders
+%list-style--nav {
+  list-style-type: none;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+%clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// variables
+$color-primary: #40c9cc;
+$color-secondary: #0d4662;
+$white: #fff;
+$sm: 15em; // redundant?
+$lg: 32em;
+
+.btn {
+  border: 0;
+  border-radius: 2px;
+  padding: 0.5em;
+  background-color: $white;
+  color: $color-primary;
+}
+
+// navbar with clear fix, on large screens li items are inline
+.nav {
+  display: none;
+  @extend %clearfix;
+  @include mqmin($lg) {
+    display: block;
+  }
+  & > ul {
+    @extend %list-style--nav;
+  }
+  &--top {
+    padding: 1em;
+    padding-right: 10em;
+    a {
+      color: $color-secondary;
+      text-decoration: none;
+    }
+    li {
+      margin: 1em;
+    }
+    @include mqmin($lg) {
+      li {
+        display: inline;
+        margin: 0 1em 0 0;
+        &:last-child { // prevents margin on last child
+          margin: 0;
+        }
+      }
+      font-size: 0.3rem;
+    }
+  }
+}
+.toggle {
+  color: $color-primary;
+  @extend .btn;
+  &:hover {
+    color: $white;
+  }
+}
+
+.active {
+  display: block;
+}
+
+// position .toggle on far right
+.toggle {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+}
+
+// hide toggle on larger screens
+@include mqmin($lg) {
+  .toggle {
+    display: none;
+  }
+}
+
+.gradient {
+  background-image: radial-gradient(
+    farthest-corner at 45px 45px,
+    $color-primary 0%,
+    #31cc9a 100%
+  );
+}
+
+.jumbotron {
+  padding: 5em 1em;
+  h1,
+  p {
+    color: $white;
+  }
+  h1 {
+    margin: 0;
+  }
+}

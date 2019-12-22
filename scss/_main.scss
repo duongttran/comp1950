@@ -1,0 +1,30 @@
+
+.indent-padding {
+    padding: 5%;
+
+    @include mq(599px) {
+        padding-bottom: 10%;
+    }
+
+}
+
+.main-banner {
+    height: 450px;
+    display: flex;
+
+    img {
+        object-fit: cover;
+    }
+}
+
+.compare-images {
+    display: flex;
+
+    img {
+        margin-right: 50px;
+    }
+}
+
+
+
+

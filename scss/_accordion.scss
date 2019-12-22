@@ -1,0 +1,28 @@
+/* ACCORDION */
+
+.accordion {
+  background-color: $grey-bgr;
+  color: $blackish;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  border: $light-grey 0.5px solid;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: $light-text;
+  overflow: hidden;
+  height: 100%;
+}

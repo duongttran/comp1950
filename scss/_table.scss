@@ -1,0 +1,19 @@
+/* TABLE */
+
+table {
+    font-weight: $body-weight;
+    font-size: 17px;
+    line-height: 27px;
+    border-collapse: collapse;
+    width: 100%;
+    }
+        
+    td, th {
+    border: 1px solid $light-grey;
+    text-align: left;
+    padding: 8px;
+    }
+        
+    tr:nth-child(even) {
+    background-color: $grey-bgr;
+}

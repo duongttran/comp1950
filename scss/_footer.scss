@@ -1,0 +1,52 @@
+/* FOOTER */
+
+footer {
+
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    
+    ul li {
+        line-height: 30px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    h4 {
+        margin: 1.2rem 0;
+    }
+
+
+    .footer-content {
+        padding: 5%;
+
+        img {
+            margin: 25px 0;
+        }
+    }
+
+    .column {
+        border: $light-grey solid 0.5px;
+        min-height: 200px;
+        flex:1;
+    }
+
+    @include mq(1000px) {
+        flex-direction: column;
+        
+        ul li, ul li a {
+            line-height: 30px;
+        }
+
+        .footer-content {
+            padding: 3%;
+        }
+
+        .logo {
+            width: 70px;
+        }
+    
+    }
+}

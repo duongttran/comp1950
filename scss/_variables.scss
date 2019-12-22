@@ -1,0 +1,48 @@
+// Global Site Variables
+// Colors
+$deep-blue: #002d55;
+$neon-blue: #0069ff;
+$neon-yellow: #fff400;
+$light-grey: #e9e9e9;
+$grey-bgr: #f0f0f0;
+
+
+//Text colors:
+$blackish: #333;
+$light-text: white;
+
+//Color variations:
+$grey-overlay: rgba(61, 61, 61, 0.726);
+
+//Fonts:
+$body-font: 'Barlow', sans-serif;
+$body-weight: 300;
+$semi-weight: 500;
+$heading-weight: 600;
+
+
+
+//Does this work?
+$hover: '&:hover, &:focus, &:active';
+
+// Mixins
+// Mixin to scale from max
+@mixin mq($maxW, $minW: false){
+    @if($minW == false){
+        @media only screen and (max-width: $maxW){
+            @content;
+        } 
+    }@else {
+        @media (max-width: $maxW) and (min-width: $minW){
+            @content;
+        } 
+    }
+    
+}
+
+// mixin to scale from min
+@mixin mqmin($size) {
+    @media only screen and (min-width: $size) {
+      @content;
+    }
+  }
