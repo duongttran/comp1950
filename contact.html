@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <script src="scripts/menu.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+    <title>Contacts</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <a href="index.html">
+              <img src="images/BCIT_logo.svg" class="logo" />
+            </a>
+            <nav class="nav nav--top">
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+            <img src="images/bars.svg" class="toggle" />
+        </header>
+
+        <hr>
+
+        <main>
+            <section class="banner">
+                <div class="main-banner">
+                    <img src="images/note.jpg">
+                </div>
+            </section>
+
+            <section class="intro">
+                <div class="indent-padding">
+                    <h1>Contact</h1>
+                    <p>Need to contact the instructor about COMP 1950? Please fill out the form below.</p>
+                </div>
+            </section>
+            <hr>
+
+            <form class="contact-form" onsubmit="return submitForm()">
+                <label for="firstName" class="first-name">First Name*:</label>
+                <input id="firstName" type="text" required>
+
+                <label for="lastName" class="last-name">Last Name*:</label>
+                <input id="lastName" type="text" required>
+
+                <label for="email" class="email">Email*:</label>
+                <input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+
+                <label for="student-number" class="student-number">Student Number:</label>
+                <input id="student-number" type="text" pattern="[A-Za-z]{1}[0-9]{8}">
+
+                <label class="student-type">I am:</label>
+                <div>
+                    <input type="radio" name="student-type" value="prospective"> Prospective Student<br>
+                    <input type="radio" name="student-type" value="current"> Current Student<br>
+                </div>
+
+                <label for="subject" class="subject">Subject:*</label>
+                <input id="subject" type="text" required>
+
+                <label for="message" class="subject">Message:</label>
+                <textarea id="message" name="message"></textarea>
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+            <hr>
+        </main>
+
+        <footer>
+            <div class="column footer-content">
+                <h3><a href="contact.html">Contact</a></h3>
+                <h4>Burnaby</h4>
+                <p>3700, Willingdon Ave, Burnaby, BC V5G 3H2</p>
+
+                <h4>Downtown</h4>
+                <p>555 Seymour St, Vancouver, BC V6B 3H6</p>
+
+                <a href="index.html">
+                    <img src="images/BCIT_logo.svg" class="logo">
+                </a>
+
+            </div>
+            <div class="column footer-content">
+                <h3><a href="about.html">About</a></h3>
+                <ul>
+                    <li><a href="about.html#course-description">Course Description</a></li>
+                    <li><a href="about.html#course-goals">Course goals</a></li>
+                    <li><a href="about.html#course-outcomes">Course Learning Outcomes / Competencies</a></li>
+                    <li><a href="about.html#evaluation-criteria">Evaluation Criteria</a></li>
+                </ul>
+            </div>
+            <div class="column footer-content">
+                <h3><a href="schedule.html">Schedule</a></h3>
+            </div>
+            <div class="column footer-content">
+                <h3><a href="lessons.html">Lessons</a></h3>
+                <ul>
+                    <li><a href="day-01.html">Day 01</a></li>
+                    <li><a href="day-02.html">Day 02</a></li>
+                    <li><a href="day-03.html">Day 03</a></li>
+                </ul>
+            </div>
+
+        </footer>
+    </div>
+
+
+
+</body>
+
+</html>
